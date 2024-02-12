@@ -1,0 +1,193 @@
+body{
+    color: black;
+}
+
+
+/* home */
+.heading-secondary{
+    background-image: linear-gradient(lightgreen, rgb(1, 60, 1), 0.8);
+   background-clip: text-cover;
+   color: #777;
+   font-weight: 700;
+}
+
+.row{
+    
+   
+}
+
+.col-1-of-3{
+    
+    width: calc((100% - 40px)/3);
+    float: left;
+    
+    margin-left: 20px;
+
+  
+   
+
+
+}
+
+.col-1-of-3:not(:last-child){
+    margin-left:0;
+
+}
+
+.card{
+
+    perspective: 2600px;
+    height: 500px;
+  
+    position: relative;
+   overflow: hidden;
+   
+}
+
+.card-side {
+ 
+    height: 500px;
+    transition: all .8s;
+    color: white;
+
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    background-color: purple;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+    overflow: hidden;
+
+}
+
+    
+   
+ 
+
+
+.card-side-front{
+    
+background-color: white;
+   
+
+}
+
+.card-side-back{
+
+    transform: rotateY(180deg);
+    background-image: linear-gradient(to right bottom,  #ffb900, #ff7730);
+  
+}
+
+.card:hover .card-side-front:hover{
+    transform: rotateY(-180deg);
+    
+}
+
+.card:hover .card-side-back{
+    transform: rotateY(0);
+}
+
+/*
+
+light: #ffb900, #ff7730
+dark: #ff7730
+light: #2998ff
+dark #5643fa 
+
+*/
+
+.picture{
+   
+  
+    background-size: cover;
+    height: 18rem;
+    background-image: linear-gradient(to right bottom,  #ffb900, #ff7730),url('../../../images/profile.JPG');
+ 
+    background-blend-mode: multiply;
+  
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card-heading{
+    font-size: 1.9rem;
+    position: absolute;
+    color: white;
+    width: 75%;
+    top: 7rem;
+    right: -6rem;
+    text-transform: uppercase;
+
+    
+
+}
+
+.heading-span{
+    padding: 16px;
+    background-image: linear-gradient(to right bottom,  #ffb900, #ff7730);
+    line-height: 1.4;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+   
+
+}
+
+.card-details {
+
+}
+
+.card-details ul {
+    list-style: none;
+    width: 80%;
+    
+}
+
+.card-details ul li {
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem;
+    color: black;
+    
+}
+
+.card-details>ul>li:not(:last-child)
+{
+    border-bottom: 1px solid #eee;
+
+}
+
+.card-cta{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn{
+    padding: 16px 24px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.card-price-value{
+    font-size: 3rem;
+}
+
+.card-price-only{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.card-price-box{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
